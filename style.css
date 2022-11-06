@@ -1,10 +1,10 @@
 body {
-  background-color: light-gray;
+  background-color: LightGray;
 }
 
 .NavBarLogo {
- height: 20px; /*currently placeholders*/
- width: 20px; /*currently placeholders*/
+ height: 1em; /*currently placeholders*/
+ width: 1em; /*currently placeholders*/
 }
 
 .NavBar {
