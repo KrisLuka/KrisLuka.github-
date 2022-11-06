@@ -16,13 +16,11 @@ nav {
 
 .navButton {
   float: right;
-  margin-right: 5em;
+  margin-right: 3em;
   font-weight: bolder;
   font-size: 3em;
-  font-family:
+  font-family: Helvetica Neue;
 }
-
-
 
 .navButton:hover {
   cursor: pointer;
