@@ -2,6 +2,11 @@ body {
   background-color: light-gray;
 }
 
+.NavBarLogo {
+ height: 20px; /*currently placeholders*/
+ width: 20px; /*currently placeholders*/
+}
+
 .NavBar {
   background-color: gray;
 }
