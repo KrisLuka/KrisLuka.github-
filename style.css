@@ -13,6 +13,7 @@ body {
 
 .navButton {
   float: right;
+  margin: 10px;
 }
 
 .navButton:hover {
