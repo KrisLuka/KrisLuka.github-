@@ -3,20 +3,26 @@ body {
 }
 
 .NavBarLogo {
- height: 5em; 
- width: 5em; 
+ float: left;
+ height: 5em;
+ width: 5em;
 }
 
 nav {
   background-color: LightGray;
-  padding: 2px;
-  border-bottom: solid 1px ;
+  padding-bottom: 6em;
+  border-bottom: solid 1px;
 }
 
 .navButton {
   float: right;
-  margin: 10px;
+  margin-right: 5em;
+  font-weight: bolder;
+  font-size: 3em;
+  font-family:
 }
+
+
 
 .navButton:hover {
   cursor: pointer;
