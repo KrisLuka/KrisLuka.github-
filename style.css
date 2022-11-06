@@ -7,8 +7,10 @@ body {
  width: 1em; /*currently placeholders*/
 }
 
-.NavBar {
-  background-color: gray;
+nav {
+  background-color: LightGray;
+  padding: 2px;
+  border-bottom: solid 1px ;
 }
 
 .navButton {
