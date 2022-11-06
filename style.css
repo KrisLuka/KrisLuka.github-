@@ -16,5 +16,5 @@ body {
 }
 
 .navButton:hover {
-  
+  cursor: pointer;
 }
