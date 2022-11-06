@@ -1,0 +1,5 @@
+Student name: Kris Janssen
+Student number: 698551
+Student class: INF1B
+URL student GitHub website: https://github.com/KrisLuka/
+URL student GitHub repository: https://KrisLuka.github.io
