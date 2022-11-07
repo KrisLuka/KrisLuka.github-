@@ -1,21 +1,22 @@
+/*Desktop Port*/
+
 @media only screen and (max-width: 2560px) {
 
 nav {
-  background-color: LightGray;
+  background-color: WhiteSmoke;
   border-bottom: solid 1px;
-  justify-content: space-around;
-  display: grid;
-  grid-template-columns: auto auto;
+
   
 }
-/*nav ul {
-  display: inline-grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10em;
-}*/
+nav ul {
+    display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
 
 .navButton {
   display: inline-block;
+  margin: 0 10% 0 0;
   font-size: 28px;
   font-weight: bold;
   font-family: Helvetica Neue;
@@ -37,135 +38,12 @@ nav a {
   }
 }
 
-/*
-@media only screen and (max-width: 950px) {
-
-nav {
-  background-color: LightGray;
-  padding-bottom: 6em;
-  border-bottom: solid 1px;
-}
-
-nav ul {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  float: right;
-  grid-gap: 4em;
-  justify-content: center;
-}
-
-.navButton {
-  display: inline-block;
-  font-size: 2em;
-  font-weight: bolder;
-  font-family: Helvetica Neue;
-}
-
-nav li {
-  padding: 10px 15px 10px 15px;
-  border: solid 2px gray;
-  border-radius: 1em;
-}
-
-nav a {
-  color: gray;
-  text-decoration: none
-}
-
-.navButton:hover {
-  cursor: pointer;
-}
-
-}
-
-@media only screen and (max-width: 800px) {
-
-nav {
-  background-color: LightGray;
-  padding-bottom: 6em;
-  border-bottom: solid 1px;
-}
-
-nav ul {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  float: right;
-  justify-content: center;
-}
-
-.navButton {
-  display: inline-block;
-  font-size: 1.5em;
-  font-weight: bolder;
-  font-family: Helvetica Neue;
-}
-
-nav li {
-  padding: 10px 15px 10px 15px;
-  border: solid 2px gray;
-  border-radius: 1em;
-}
-
-nav a {
-  color: gray;
-  text-decoration: none
-}
-
-.navButton:hover {
-  cursor: pointer;
-}
-
-}
-
-@media only screen and (max-width: 750px) {
-
-body {
-  background-color: LightGray;
-}
-
-.NavBarLogo {
- float: left;
- height: 5em;
- width: 5em;
-}
-
-nav {
-  background-color: LightGray;
-  padding-bottom: 6em;
-  border-bottom: solid 1px;
-}
-
-nav ul {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  float: right;
-  justify-content: center;
-}
-
-.navButton {
-  display: inline-block;
-  font-size: 1em;
-  font-weight: bolder;
-  font-family: Helvetica Neue;
-}
-
-nav li {
-  padding: 10px 15px 10px 15px;
-  border: solid 2px gray;
-  border-radius: 1em;
-}
-  
-  .navButton:hover {
-  cursor: pointer;
-  }
-}*/
-/*FIX CSS DISAPPEARING WHEN TOO SMALL*/
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 body {
-  background-color: LightGray;
+  background-color: WhiteSmoke;
   font-family: "Roboto-Mono", monospace;
 }
 
@@ -173,6 +51,7 @@ body {
  float: left;
  height: 5em;
  width: 5em;
+    margin-right: 1em;
 }
 
 .NavBarLogo:hover {
@@ -186,23 +65,119 @@ body {
 }
 
 header {
-  text-align: center;
+/*background-color: lightgray;
+  border: solid 2px silver;
+  border-radius: 3em;
+  padding: 1em*/
+margin-bottom: 2em;
 }
 
-h1, h2 {
+header h1, header h2, .title {
   font-family: "Roboto Slab", monospace;
+  margin-left: 2em;
 }
 
 .articles {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.articles article {
-  overflow-wrap: break-word;
-  border: solid 2px gray;
+.articles p {
+   border-radius: 10px;
+  margin: 2em 1% 2em 1%;
+  background-color: #dee1e4;
   padding: 1em;
-  border-radius: 20px;
-  align-items: center;
+
+  overflow-wrap: break-word;
+}
+
+
+
+
+
+
+
+/*Iphone / Mobile Port*/
+@media only screen 
+    and (max-device-width: 390px)  {
+
+  nav {
+  background-color: WhiteSmoke;
+  border-bottom: solid 1px;
+
+  
+}
+nav ul {
+    display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.navButton {
+  display: inline-block;
+  margin: 0 10% 0 0;
+  font-size: 3em;
+  font-weight: bold;
+  font-family: Helvetica Neue;
+}
+
+nav li {
+  padding: 25px;
+  border: solid 4px gray;
+  border-radius: 3em;
+}
+
+nav a {
+  color: gray;
+  text-decoration: none
+}
+  
+body {
+  background-color: WhiteSmoke;
+  font-family: "Roboto-Mono", monospace;
+}
+
+.NavBarLogo {
+ float: left;
+ height: 10em;
+ width: 10em;
+ margin-right: 3em;
+}
+
+.logo {
+  margin-top: 2em;
+  height: 20em;
+  width: 20em;
+}
+
+header {
+/*background-color: lightgray;
+  border: solid 2px silver;
+  border-radius: 3em;
+  padding: 1em*/
+margin-bottom: 6em;
+}
+  
+  header h1, header h2, .title {
+  font-family: "Roboto Slab", monospace;
+  margin-left: 2em;
+}
+
+
+.articles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.articles p {
+  border-radius: 1em;
+  margin: 2em 1% 2em 1%;
+  background-color: #DFE1E4;
+  padding: 1em;
+  font-size: 2em;
+
+  overflow-wrap: break-word;
+  }
 }
