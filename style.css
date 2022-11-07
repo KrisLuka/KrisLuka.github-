@@ -1,31 +1,29 @@
 @media only screen and (max-width: 2560px) {
 
-
-
 nav {
   background-color: LightGray;
-  padding-bottom: 6em;
   border-bottom: solid 1px;
-}
-
-nav ul {
+  justify-content: space-around;
   display: grid;
-  grid-template-columns: auto auto auto;
-  float: right;
-  grid-gap: 10em;
-  justify-content: center;
+  grid-template-columns: auto auto;
+  
 }
+/*nav ul {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10em;
+}*/
 
 .navButton {
   display: inline-block;
-  font-size: 2em;
-  font-weight: bolder;
+  font-size: 28px;
+  font-weight: bold;
   font-family: Helvetica Neue;
 }
 
 nav li {
   padding: 10px 15px 10px 15px;
-  border: dashed 2px gray;
+  border: solid 2px gray;
   border-radius: 1em;
 }
 
@@ -36,11 +34,10 @@ nav a {
 
 .navButton:hover {
   cursor: pointer;
+  }
 }
 
-}
-
-
+/*
 @media only screen and (max-width: 950px) {
 
 nav {
@@ -66,7 +63,7 @@ nav ul {
 
 nav li {
   padding: 10px 15px 10px 15px;
-  border: dashed 2px gray;
+  border: solid 2px gray;
   border-radius: 1em;
 }
 
@@ -105,7 +102,7 @@ nav ul {
 
 nav li {
   padding: 10px 15px 10px 15px;
-  border: dashed 2px gray;
+  border: solid 2px gray;
   border-radius: 1em;
 }
 
@@ -154,21 +151,22 @@ nav ul {
 
 nav li {
   padding: 10px 15px 10px 15px;
-  border: dashed 2px gray;
+  border: solid 2px gray;
   border-radius: 1em;
 }
   
   .navButton:hover {
   cursor: pointer;
   }
-}
+}*/
+/*FIX CSS DISAPPEARING WHEN TOO SMALL*/
 
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 body {
   background-color: LightGray;
+  font-family: "Roboto-Mono", monospace;
 }
 
 .NavBarLogo {
@@ -179,4 +177,32 @@ body {
 
 .NavBarLogo:hover {
   cursor: pointer;
+}
+
+.logo {
+  margin-top: 2em;
+  height: 20em;
+  width: 20em;
+}
+
+header {
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: "Roboto Slab", monospace;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 1em;
+}
+
+.articles article {
+  overflow-wrap: break-word;
+  border: solid 2px gray;
+  padding: 1em;
+  border-radius: 20px;
+  align-items: center;
 }
