@@ -15,11 +15,21 @@ nav {
 }
 
 .navButton {
+  display: block;
   float: right;
-  margin-right: 3em;
+  margin-right: 5em;
+  font-size: 2em;
   font-weight: bolder;
-  font-size: 3em;
   font-family: Helvetica Neue;
+}
+
+nav li {
+  border: dashed 1px gray;
+}
+
+nav a {
+  color: gray;
+  text-decoration: none
 }
 
 .navButton:hover {
