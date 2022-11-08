@@ -1,5 +1,4 @@
 /*Desktop Port*/
-
 @media only screen and (max-width: 2560px) {
 
 nav {
@@ -8,6 +7,16 @@ nav {
 
   
 }
+
+input {
+  visibility: hidden;
+}
+  
+nav img {
+  display: none
+}
+
+  
 nav ul {
     display: flex;
   flex-direction: row;
@@ -114,15 +123,15 @@ nav ul {
   justify-content: left;
 }
 
-.navButton {
-  display: inline-block;
+/*.navButton {
+  display: none;
   margin: 0 10% 0 0;
   font-size: 3em;
   font-weight: bold;
   font-family: Helvetica Neue;
-}
+}*/
 
-nav li {
+nav .navButton {
   padding: 25px;
   border: solid 4px gray;
   border-radius: 3em;
@@ -162,7 +171,18 @@ margin-bottom: 6em;
   header h1, header h2, .title {
   font-family: "Roboto Slab", monospace;
   margin-left: 2em;
+  font-weight: bold;
 }
+
+  header h1
+  {
+    font-size: 4em;
+  }
+
+  header h2
+  {
+    font-size: 3em;
+  }
 
 
 .articles {
@@ -180,4 +200,48 @@ margin-bottom: 6em;
 
   overflow-wrap: break-word;
   }
+
+/*.test {
+  opacity: 0;
+  display: block;
+  background-color: red;
+  }
+  
+
+.hamburgermenu:target
+  {
+    opacity: initial;
+    display: block;
+  }
+  
+.hamburgermenu img {
+  height: 5rem;
+  width: 5rem;
+  display: block;
+  }*/
+
+  
+nav li {
+  visibility: hidden;
+  display: none;
+}
+
+nav img {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  height: 5rem;
+  width: 5rem;
+}
+
+  input:checked + nav ul {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input:checked + nav li {
+    visibility: visible;
+  }
+  
 }
