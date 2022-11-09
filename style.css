@@ -1,6 +1,23 @@
 footer {
   background-color: lightgray;
-  border-radius: 1.5rem
+  margin-top: 5em;
+  padding: 1em;
+  color: gray;
+  border-radius: 1.5rem;
+  text-align: center;
+}
+
+.orderButton {
+  background-color: #37d100;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5em;
+}
+
+.orderButton a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
 }
 
 article p {
@@ -449,7 +466,8 @@ section aside {
    padding: 1em;
    overflow-wrap: break-word;
    flex-grow: 0;
-  flex-shrink: 0
+  flex-shrink: 0;
+  max-width: 30%;
 }
 
 section p, aside p {
