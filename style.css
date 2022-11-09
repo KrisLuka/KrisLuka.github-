@@ -1,6 +1,51 @@
-/*Desktop Port*/
-@media only screen and (max-width: 2560px) {
+footer {
+  background-color: lightgray;
+  border-radius: 1.5rem
+}
 
+article p {
+  background-color: lightgray;
+   border-radius: 1.5em;
+   padding: 1em 1em 7em 1em;
+}
+
+.cookies {
+  position: fixed;
+  background: rgba(255,170,0,0.5);
+  color: #fff;
+  opacity: inherit;
+  border-radius: 1em;
+  padding: 2em 5em 2em 5em;
+  bottom: 0;
+  right: 0;
+  margin: 0 4em 1em 0;
+}
+
+section aside {
+    background-color: lightgray;
+   border-radius: 1.5em;
+   padding: 1em;
+   overflow-wrap: break-word;
+   margin: 0 1em 0 1em;
+     flex-grow: 0;
+  flex-shrink: 0
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2em
+}
+
+/*Desktop Port*/
+.articleImageMobile {
+  display: none;
+}
+
+
+@media only screen and (max-device-width: 2560px) {
+
+  
 nav {
   background-color: WhiteSmoke;
   border-bottom: solid 1px;
@@ -8,6 +53,16 @@ nav {
   
 }
 
+  .articleImage {
+    display: initial;
+    margin-top: 1em;
+    border-radius: 1em;
+    height: 19rem;
+    width: 14rem; 
+    float: right;
+    margin-left: 1em;
+  }
+  
 input {
   visibility: hidden;
 }
@@ -45,7 +100,29 @@ nav a {
 .navButton:hover {
   cursor: pointer;
   }
+
+
+  /*.articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+
 }
+
+.articles p {
+   border-radius: 10px;
+    margin: 5% 1% 0 1%;
+  background-color: #dee1e4;
+  padding: 1em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  flex: 30%;
+}*/
+
+}
+
+
 
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
@@ -86,30 +163,34 @@ header h1, header h2, .title {
   margin-left: 2em;
 }
 
-.articles {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+
+
+p a {
+  text-decoration: none
+}
+.imageSource {
+  margin-top: 1em;
+  font-size: 0.5em;
+  display: block;
+  color: gray
 }
 
-.articles p {
-   border-radius: 10px;
-  margin: 2em 1% 2em 1%;
-  background-color: #dee1e4;
-  padding: 1em;
+.subtitle {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
 
-  overflow-wrap: break-word;
+.quote {
+  font-style: italic;
+  color: dimgray
 }
 
 
 
 
-
-
-
-/*Iphone / Mobile Port*/
+/* tablet / ipad */
 @media only screen 
-    and (max-device-width: 390px)  {
+    and (max-device-width: 810px)  {
 
   nav {
   background-color: WhiteSmoke;
@@ -117,8 +198,12 @@ header h1, header h2, .title {
 
   
 }
+
+
+
+  
 nav ul {
-    display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: left;
 }
@@ -160,6 +245,9 @@ body {
   width: 20em;
 }
 
+
+  /*MAKE NEW ARTICLE SYSTEM HERE*/
+
 header {
 /*background-color: lightgray;
   border: solid 2px silver;
@@ -185,21 +273,20 @@ margin-bottom: 6em;
   }
 
 
-.articles {
+/*.articles {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 }
 
 .articles p {
   border-radius: 1em;
-  margin: 2em 1% 2em 1%;
   background-color: #DFE1E4;
   padding: 1em;
   font-size: 2em;
-
+  margin: 5% 1% 0 1%;
   overflow-wrap: break-word;
-  }
+  }*/
 
 /*.test {
   opacity: 0;
@@ -242,6 +329,172 @@ nav img {
   
   input:checked + nav li {
     visibility: visible;
+  }
+
+    .articleImage {
+    margin-top: 1em;
+    border-radius: 1em;
+    height: 40rem;
+    width: 32rem;
+    float: right;
+  }
+  
+}
+p a {
+  text-decoration: none
+}
+.imageSource {
+  margin-top: 1em;
+  font-size: 0.5em;
+  display: block;
+  color: gray
+}
+
+.subtitle {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.quote {
+  font-style: italic;
+  color: dimgray
+}
+
+
+
+
+
+
+
+
+/*Iphone / Mobile Port*/
+@media only screen 
+    and (max-device-width: 428px)  {
+
+  .articleImage {
+    display: none;
+  }
+
+  nav {
+  background-color: WhiteSmoke;
+  border-bottom: solid 1px;
+
+  
+}
+nav ul {
+    display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+nav .navButton {
+  padding: 25px;
+  border: solid 4px gray;
+  border-radius: 3em;
+}
+
+nav a {
+  color: gray;
+  text-decoration: none
+}
+  
+body {
+  background-color: WhiteSmoke;
+  font-family: "Roboto-Mono", monospace;
+}
+
+.NavBarLogo {
+ float: left;
+ height: 10em;
+ width: 10em;
+ margin-right: 3em;
+}
+
+.logo {
+  margin-top: 2em;
+  height: 20em;
+  width: 20em;
+}
+
+header {
+margin-bottom: 6em;
+}
+  
+  header h1, header h2, .title {
+  font-family: "Roboto Slab", monospace;
+  margin-left: 2em;
+  font-weight: bold;
+}
+
+  header h1
+  {
+    font-size: 4em;
+  }
+
+  header h2
+  {
+    font-size: 3em;
+  }
+
+  
+.subtitle {
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+
+
+section aside {
+   border-radius: 1.5rem;
+   padding: 1em;
+   overflow-wrap: break-word;
+   flex-grow: 0;
+  flex-shrink: 0
+}
+
+section p, aside p {
+  font-size: 26px;
+}
+
+  ol li {
+  font-size: 20px;  
+  }
+  
+  section {
+  display: flex;
+  flex-direction: row;
+  }
+  
+nav li {
+  visibility: hidden;
+  display: none;
+}
+
+nav img {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  height: 5rem;
+  width: 5rem;
+}
+
+  input:checked + nav ul {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input:checked + nav li {
+    visibility: visible;
+  }
+
+    .articleImageMobile {
+    display: block;
+    margin-top: 1em;
+    border-radius: 1em;
+    height: 60rem;
+    width: 50rem;
+    margin: 2em auto 0 auto;
   }
   
 }
