@@ -3,7 +3,6 @@
   --confirmAccent: #2bac08
 }
 
-
 footer {
   background-color: lightgray;
   margin-top: 5em;
@@ -19,9 +18,10 @@ footer {
   grid-gap: 1em;
 }
 
-.productGridContainer p {
+.productGridContainer .productGridItem {
   background-color: #cbcbcb;
-  border-radius: 1.5rem;
+  border-radius: 1.5rem; 
+  padding-bottom: 1em;
 }
 
 .subsubtitle {
@@ -36,7 +36,12 @@ footer {
     grid-template-columns: auto auto auto;
 }
 
-.contactProductImage {
+.imageGridItemProductPage {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.contactProductImage, .productImage {
   height: 15em;
   width: 11em;
   border-radius: 1rem
@@ -474,7 +479,7 @@ nav img {
   font-weight: bolder;
 }
 
-  .contactProductImage {
+  .contactProductImage, .productImage {
     height: 15em;
     width: 11em;
   }
@@ -489,4 +494,16 @@ nav img {
   display: grid;
   grid-template-columns: auto;
   }
+
+  .productGridContainer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 1em;
+}
+
+  .imageGridItemProductPage {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  
 }
