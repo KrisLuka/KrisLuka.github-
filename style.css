@@ -1,20 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+
 :root {
   --confirmColor: #37d100;
   --confirmAccent: #2bac08
 }
 
+video {
+  height: 30rem;
+  width: 25rem;
+  border-radius: 1.5rem
+}
+
 footer {
-  background-color: lightgray;
+  background-color: #D3D3D3;
   margin-top: 5em;
   padding: 1em;
-  color: gray;
+  color: #808080;
   border-radius: 1.5rem;
   text-align: center;
 }
 
 .productGridContainer {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   grid-gap: 1em;
 }
 
@@ -28,7 +38,6 @@ footer {
   display: block;
   font-weight: bolder;
   font-size: 1.5rem;
-  margib-top: 1em;
 }
 
 .imageGridItem {
@@ -38,7 +47,7 @@ footer {
 
 .imageGridItemProductPage {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto auto;
 }
 
 .contactProductImage, .productImage {
@@ -56,12 +65,12 @@ footer {
 
 .orderButton a {
   text-decoration: none;
-  color: white;
+  color: #FFFFFF;
   font-weight: bolder;
 }
 
 article p {
-  background-color: lightgray;
+  background-color: #D3D3D3;
    border-radius: 1.5em;
    padding: 1em 1em 10em 1em;
 }
@@ -75,10 +84,11 @@ article p {
   bottom: 0;
   right: 0;
   margin: 0 4em 1em 0;
+  z-index: 9999;
 }
 
 .flexSection aside {
-    background-color: lightgray;
+    background-color: #D3D3D3;
    border-radius: 1.5em;
    padding: 1em;
    overflow-wrap: break-word;
@@ -96,21 +106,29 @@ article p {
 
 .contactContainer fieldset {
   border-radius: 1em;
-  border: solid 2px gray
+  border: solid 2px #808080
 }
 
 
-.contactContainer, .gridContainer {
+.contactContainer {
   display: grid;
   margin-top: 2em;
   visibility: visible;
   grid-template-columns: auto auto;
   grid-gap: 1em;
-  justify-content: fill;
+}
+
+.gridContainer {
+  display: grid;
+  margin-top: 2em;
+  visibility: visible;
+  grid-template-columns: auto;
+  grid-gap: 1em;
+  justify-content: space-evenly;
 }
 
 .gridItem {
-  background-color: lightgray;
+  background-color: #D3D3D3;
   border-radius: 1.5rem;
   border: none;
   padding: 1em;
@@ -150,7 +168,7 @@ article p {
 
 
 /*Desktop Port*/
-@media only screen and (min-device-width: 1280px) {
+@media screen and (min-width: 1280px) {
 
 .articleImageMobile {
   display: none;
@@ -161,7 +179,7 @@ article p {
 }
   
 nav {
-  background-color: WhiteSmoke;
+  background-color: #F5F5F5;
   border-bottom: solid 1px;
 
   
@@ -198,12 +216,12 @@ nav ul {
 
 nav li {
   padding: 10px 15px 10px 15px;
-  border: solid 2px gray;
+  border: solid 2px #808080;
   border-radius: 1em;
 }
 
 nav a {
-  color: gray;
+  color: #808080;
   text-decoration: none
 }
 
@@ -215,11 +233,8 @@ nav a {
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-
 body {
-  background-color: WhiteSmoke;
+  background-color: #F5F5F5;
   font-family: "Roboto-Mono", monospace;
 }
 
@@ -254,11 +269,12 @@ header h1, header h2, .title {
 p a {
   text-decoration: none
 }
+
 .imageSource {
   margin-top: 1em;
   font-size: 0.5em;
   display: block;
-  color: gray
+  color: #808080
 }
 
 .subtitle {
@@ -268,13 +284,12 @@ p a {
 
 .quote {
   font-style: italic;
-  color: dimgray
+  color: #696969;
 }
 
 
 
 
-/*TABLET GOES HERE*/
 
 
 
@@ -283,18 +298,20 @@ p a {
 
 
 
-/*Iphone / Mobile Port*/
-@media only screen 
-    and (max-device-width: 480px)  {
+/*Tablet / Ipad Port*/
+@media screen 
+    and (min-width: 481px) 
+    and (max-width: 1279px) {
 
-  .articleImage {
-    display: none;
+  
+  .productGridContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1em;
   }
 
-
-
   nav {
-  background-color: WhiteSmoke;
+  background-color: #F5F5F5;
   border-bottom: solid 1px;
 
   
@@ -308,17 +325,17 @@ nav ul {
 
 nav .navButton {
   padding: 25px;
-  border: solid 4px gray;
+  border: solid 4px #808080;
   border-radius: 3em;
 }
 
 nav a {
-  color: gray;
+  color: #808080;
   text-decoration: none
 }
   
 body {
-  background-color: WhiteSmoke;
+  background-color: #F5F5F5;
   font-family: "Roboto-Mono", monospace;
 }
 
@@ -385,7 +402,7 @@ margin-bottom: 6em;
   flex-direction: row;
   }
   
-nav li {
+nav ul {
   visibility: hidden;
   display: none;
 }
@@ -402,13 +419,237 @@ nav img {
   width: 5rem;
 }
 
-  .hamburgerCheckBox:checked ~ nav ul {
+
+    .hamburgerCheckBox:checked ~ ul, li{
     visibility: visible;
-    display: flex;
-    flex-direction: column;
+    display: block;
+  }
+
+    .articleImageMobile {
+    display: none;
+  }
+
+  .articleImage {
+    display: initial;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    height: 19rem;
+    width: 14rem; 
+    float: left;
+    margin-right: 1em;
+  }
+
+.contactContainer fieldset {
+  border-radius: 2em;
+  border: solid 3px #808080
+} 
+
+  fieldset legend {
+    font-size: 2rem;
+  }
+
+.contactContainer {
+  display: grid;
+  grid-template-columns: auto;
+  margin-top: 2em;
+  visibility: visible;
+}
+
+   .gridContainer {
+       display: block;
+  margin-top: 2em;
+  visibility: visible;
+   }
+
+.gridItem {
+  background-color: #D3D3D3;
+  border-radius: 1.5rem;
+  border: none;
+  margin-bottom: 2em;
+  padding: 1em;
+}
+
+.contactContainer .textInput {
+  background-color: #e3e3e3;
+  border-radius: 2rem;
+  padding: 5rem 20rem 5rem 5rem;
+  border: solid 1px #afb1b3;
+}
+
+  .textInputLarge::placeholder {
+    font-size: 1rem;
+  }
+
+  .textInput::placeholder {
+    font-size: 1rem;
+  }
+
+.contactContainer .textInputLarge {
+  background-color: #e3e3e3;
+  padding: 5rem 20rem 5rem 5rem;
+  border-radius: 2rem;
+  grid-area: 3 / 1 / span 4 / span 1;
+  border: solid 1px #afb1b3;
+}
+
+.submitButton {
+  background-color: var(--confirmColor);
+  font-size: 3rem;
+  border: solid 1px var(--confirmAccent);
+  font-weight: bolder;
+}
+
+  .contactProductImage, .productImage {
+    height: 15em;
+    width: 11em;
   }
   
-  .hamburgerCheckBox:checked ~ nav ul li {
+.imageGridItem {
+    display: grid;
+    grid-template-columns: auto;
+  justify-content: space-evenly;
+}
+  
+.inputContainer {
+  display: grid;
+  grid-template-columns: auto;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/*Iphone / Mobile Port*/
+@media screen 
+    and (max-width: 480px)  {
+
+  .articleImage {
+    display: none;
+  }
+
+
+
+  nav {
+  background-color: #F5F5F5;
+  border-bottom: solid 1px;
+
+  
+}
+  
+nav ul {
+    display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+nav .navButton {
+  padding: 25px;
+  border: solid 4px #808080;
+  border-radius: 3em;
+}
+
+nav a {
+  color: #808080;
+  text-decoration: none
+}
+  
+body {
+  background-color: #F5F5F5;
+  font-family: "Roboto-Mono", monospace;
+}
+
+.NavBarLogo {
+ float: left;
+ height: 10em;
+ width: 10em;
+ margin-right: 3em;
+}
+
+.logo {
+  margin-top: 2em;
+  height: 20em;
+  width: 20em;
+}
+
+header {
+margin-bottom: 6em;
+}
+  
+  header h1, header h2, .title {
+  font-family: "Roboto Slab", monospace;
+  margin-left: 2em;
+  font-weight: bold;
+}
+
+  header h1
+  {
+    font-size: 4em;
+  }
+
+  header h2
+  {
+    font-size: 3em;
+  }
+
+  
+.subtitle {
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+
+
+.flexSection aside {
+   border-radius: 1.5rem;
+   padding: 1em;
+   overflow-wrap: break-word;
+   flex-grow: 0;
+  flex-shrink: 0;
+  max-width: 30%;
+}
+
+.flexSection p, aside p {
+  font-size: 26px;
+}
+
+  ol li {
+  font-size: 20px;  
+  }
+  
+  .flexSection {
+  display: flex;
+  flex-direction: row;
+  }
+  
+nav ul {
+  visibility: hidden;
+  display: none;
+}
+  
+
+  .hamburgerCheckBox {
+  visibility: hidden;
+}
+  
+nav img {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  height: 5rem;
+  width: 5rem;
+}
+    
+  .hamburgerCheckBox:checked ~ ul, li{
     visibility: visible;
     display: block;
   }
@@ -424,7 +665,7 @@ nav img {
 
 .contactContainer fieldset {
   border-radius: 2em;
-  border: solid 3px gray
+  border: solid 3px #808080
 } 
 
   fieldset legend {
@@ -435,11 +676,10 @@ nav img {
   display: block;
   margin-top: 2em;
   visibility: visible;
-  justify-content: fill;
 }
 
 .gridItem {
-  background-color: lightgray;
+  background-color: #D3D3D3;
   border-radius: 1.5rem;
   border: none;
   margin-bottom: 2em;
@@ -499,11 +739,19 @@ nav img {
   display: grid;
   grid-template-columns: auto;
   grid-gap: 1em;
-}
+  }
 
-  .imageGridItemProductPage {
-    display: grid;
-    grid-template-columns: auto auto auto;
+  .imageGridItem {
+        display: grid;
+    grid-template-columns: auto;
   }
   
+  .imageGridItemProductPage {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .imageGridItemProductPage img {
+        height: 25rem;
+    width: 21rem;
+  }
 }
