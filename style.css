@@ -13,6 +13,24 @@ footer {
   text-align: center;
 }
 
+.productGridContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1em;
+}
+
+.productGridContainer p {
+  background-color: #cbcbcb;
+  border-radius: 1.5rem;
+}
+
+.subsubtitle {
+  display: block;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  margib-top: 1em;
+}
+
 .imageGridItem {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -133,6 +151,9 @@ article p {
   display: none;
 }
 
+    .hamburgerCheckBox {
+  visibility: hidden;
+}
   
 nav {
   background-color: WhiteSmoke;
