@@ -15,6 +15,9 @@ table th:hover, table td:nth-child(odd):hover, table td:nth-child(even):hover {
 	background-color: #FFE4C4
 }
 
+a:active {
+	color: #00c7fc;
+}
 
 
 table {
