@@ -7,6 +7,45 @@
   --confirmAccent: #2bac08
 }
 
+/*table td {
+	border: solid 1px #000000;
+}*/
+
+table th:hover, table td:nth-child(odd):hover, table td:nth-child(even):hover {
+	background-color: #FFE4C4
+}
+
+
+
+table {
+	background-color: #c0c0c0;
+	padding: 1em;
+	border-radius: 1rem;
+}
+
+table td {
+	border: solid 1px #444444;
+}
+
+table th {
+	padding: 0 1em 0 1em;
+	border-color: #7a7a7a;
+	border-radius: 4px;
+	border-width: 1px;
+	border-style: solid;
+
+}
+
+table td:nth-child(even) {
+	background-color: #aaaaaa;
+}
+
+body {
+	letter-spacing: 1px;
+	line-height: 18px;
+text-indent: 1em;
+}
+
 video {
   height: 30rem;
   width: 25rem;
@@ -38,6 +77,7 @@ footer {
   display: block;
   font-weight: bolder;
   font-size: 1.5rem;
+	line-height: 25px;
 }
 
 .imageGridItem {
@@ -106,7 +146,9 @@ article p {
 
 .contactContainer fieldset {
   border-radius: 1em;
-  border: solid 2px #808080
+	border-color: #808080;
+	border-width: 2px;
+	border-style: solid
 }
 
 
@@ -125,6 +167,13 @@ article p {
   grid-template-columns: auto;
   grid-gap: 1em;
   justify-content: space-evenly;
+}
+
+.gridContainerPricing {
+  display: grid;
+  margin-top: 2em;
+  grid-template-columns: auto auto;
+  grid-gap: 1em;
 }
 
 .gridItem {
@@ -337,6 +386,9 @@ nav a {
 body {
   background-color: #F5F5F5;
   font-family: "Roboto-Mono", monospace;
+	letter-spacing: initial;
+	line-height: initial;
+	text-indent: 1em;
 }
 
 .NavBarLogo {
@@ -514,6 +566,13 @@ nav img {
   display: grid;
   grid-template-columns: auto;
   }
+
+		.gridContainerPricing {
+  display: grid;
+  margin-top: 2em;
+  grid-template-columns: auto;
+  grid-gap: 1em;
+}
   
 }
 
@@ -566,6 +625,9 @@ nav a {
 body {
   background-color: #F5F5F5;
   font-family: "Roboto-Mono", monospace;
+	letter-spacing: initial;
+	line-height: initial;
+	text-indent: 1em;
 }
 
 .NavBarLogo {
@@ -750,6 +812,15 @@ nav img {
     display: grid;
     grid-template-columns: auto;
   }
+
+	.gridContainerPricing {
+  display: grid;
+  margin-top: 2em;
+  grid-template-columns: auto;
+  grid-gap: 1em;
+}
+
+	
   .imageGridItemProductPage img {
         height: 25rem;
     width: 21rem;
